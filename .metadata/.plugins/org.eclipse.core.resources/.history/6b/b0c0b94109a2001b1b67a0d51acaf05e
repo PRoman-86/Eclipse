@@ -1,0 +1,26 @@
+package HW11;
+
+public class Worker extends Employee {
+
+	protected final String position = "Worker";
+
+	public Worker(String name, double baseSalary) {
+		super(name, baseSalary);
+		System.out.println(getName() + "|" + getPosition() + "|" + getSalary() + "|" + getSalary());
+	}
+
+	public String getPosition() {
+		return this.position;
+	}
+	
+    @Override
+	public final double getBaseSalary() {
+		return baseSalary;
+	}
+
+	@Override
+	public double getSalary() {
+		// TODO Auto-generated method stub
+		return baseSalary;
+	}
+}

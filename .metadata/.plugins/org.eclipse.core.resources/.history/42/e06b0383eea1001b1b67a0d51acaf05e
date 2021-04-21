@@ -1,0 +1,25 @@
+import org.apache.commons.lang3.StringUtils;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		textTest();
+		numberTest();
+		
+	}
+		
+
+	public static void textTest() {
+
+		System.out.println("Roman".equals(StringUtils.capitalize("roman")));
+
+	}
+	
+	public static void numberTest() {
+
+		System.out.println("12345".equals(StringUtils.capitalize("12345")));
+
+	}
+
+

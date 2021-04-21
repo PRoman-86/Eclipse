@@ -1,0 +1,11 @@
+package HW10;
+
+public abstract class BaseEmployee {
+	
+	private String employeeName;
+	private int employeeAge;
+	private char employeeSex;
+	private double employeeSalaryOnDay;
+	protected Month[] monthsArr;
+
+}

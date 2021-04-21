@@ -1,0 +1,11 @@
+package HW11;
+
+public class StaffUtils {
+	
+	public static String searchByName(Employee[] employeeArr, String searchName) {
+		for (int i=0; i<employeeArr.length; i++) {
+			if ()
+		}
+	}
+
+}

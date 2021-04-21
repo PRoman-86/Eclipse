@@ -1,0 +1,66 @@
+package HW10;
+
+public class Employee {
+
+	private String employeeName;
+	private int employeeAge;
+	private char employeeSex;
+	private double employeeSalaryOnDay;
+	protected Month[] monthsArr;
+
+	public Employee(String employeeName, int employeeAge, char employeeSex, double employeeSalaryOnDay, Month[] monthsArr) {
+		this.employeeName = employeeName;
+		this.employeeAge = employeeAge;
+		this.employeeSex = employeeSex;
+		this.employeeSalaryOnDay = employeeSalaryOnDay;
+		this.monthsArr = monthsArr;
+	}
+
+	public double getSalary(Month[] monthArray) {
+		int allWorkDays = 0;
+		for (int i = 0; i < monthArray.length; i++) {
+			allWorkDays = allWorkDays + monthArray[i].getWorkDays();
+		}
+
+		return allWorkDays * getEmployeeSalaryOnDay();
+
+	}
+	
+	public void printer() {
+		System.out.println(getEmployeeName() + "|" + getEmployeeAge() + "|" + getEmployeeSex() + "|"
+				+ getEmployeeSalaryOnDay() + "|" + getSalary(monthsArr));
+	}
+
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+	public int getEmployeeAge() {
+		return employeeAge;
+	}
+
+	public void setEmployeeAge(int employeeAge) {
+		this.employeeAge = employeeAge;
+	}
+
+	public char getEmployeeSex() {
+		return employeeSex;
+	}
+
+	public void setEmployeeSex(char employeeSex) {
+		this.employeeSex = employeeSex;
+	}
+
+	public double getEmployeeSalaryOnDay() {
+		return employeeSalaryOnDay;
+	}
+
+	public void setEmployeeSalaryOnDay(double employeeSalaryOnDay) {
+		this.employeeSalaryOnDay = employeeSalaryOnDay;
+	}
+
+}

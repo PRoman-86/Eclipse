@@ -1,0 +1,21 @@
+package HW11;
+
+public class Manager extends Worker {
+	
+	protected int numberOfSubordinates;
+
+	public Manager() {
+		super();
+		
+	}
+
+	public int getNumberOfSubordinates() {
+		return numberOfSubordinates;
+	}
+
+	public void setNumberOfSubordinates(int numberOfSubordinates) {
+		this.numberOfSubordinates = numberOfSubordinates;
+	}
+	
+	
+}

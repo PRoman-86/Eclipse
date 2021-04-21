@@ -1,0 +1,21 @@
+package HW10;
+
+public abstract class BaseEmployee {
+	
+	private String employeeName;
+	private int employeeAge;
+	private char employeeSex;
+	private double employeeSalaryOnDay;
+	protected Month[] monthsArr;
+	
+	public BaseEmployee(String employeeName, int employeeAge, char employeeSex, double employeeSalaryOnDay, Month[] monthsArr) {
+		this.employeeName = employeeName;
+		this.employeeAge = employeeAge;
+		this.employeeSex = employeeSex;
+		this.employeeSalaryOnDay = employeeSalaryOnDay;
+		this.monthsArr = monthsArr;
+	}
+	
+	abstract double getSalary();
+
+}

@@ -1,0 +1,23 @@
+package HW11;
+
+public class Director extends Manager {
+	
+	protected final String position = "Director";
+	
+	public Director(String name, double baseSalary, int numberOfSubordinates) {
+		super(name, baseSalary, numberOfSubordinates);
+		System.out.println(getName() + "|" + getPosition() + "|" + getSalary() + "|" + getSalary());
+	}
+	
+	@Override
+	public double getSalary() {
+		if (numberOfSubordinates == 0)
+			return baseSalary;
+		return baseSalary * (numberOfSubordinates / 100 * 9);
+	}
+	
+	public String getPosition() {
+		return this.position;
+	}
+
+}

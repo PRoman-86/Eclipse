@@ -1,0 +1,16 @@
+package HW11;
+
+public class Director extends Manager {
+	
+	public Director(String name, double baseSalary, int numberOfSubordinates) {
+		super(name, baseSalary, numberOfSubordinates);
+		
+	}
+
+	public double getSalary() {
+		if (numberOfSubordinates == 0)
+			return baseSalary;
+		return baseSalary * (numberOfSubordinates / 100 * 9);
+	}
+
+}

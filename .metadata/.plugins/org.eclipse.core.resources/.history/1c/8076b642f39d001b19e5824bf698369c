@@ -1,0 +1,16 @@
+package HW11;
+
+public class Worker extends Employee {
+	
+	protected final String position = "Worker";
+
+	public Worker(String name, double baseSalary) {
+		super(name, baseSalary);
+		System.out.println(name + "|" + position + "|" + baseSalary + "|" + salary);
+	}
+
+	public double getSalary() {
+		return baseSalary;
+
+	}
+}

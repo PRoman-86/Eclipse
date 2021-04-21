@@ -1,0 +1,21 @@
+import org.apache.commons.lang3.StringUtils;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		stringTest("Привет всем, кто живет на Луне", 10);
+		stringTest("Привет всем, кто живет на Луне", 20);
+		stringTest(null, 2);
+		stringTest("", 5);
+		
+	}
+		
+	
+	public static void stringTest(String str, int sym) {
+		
+		System.out.println(StringUtils.abbreviate(str, sym));
+	}
+}
+
+

@@ -1,0 +1,16 @@
+package HW11;
+
+public class Worker extends Employee {
+	
+	protected String position = "Worker";
+
+	public Worker(String name, double baseSalary) {
+		super(name, baseSalary);
+		// TODO Auto-generated constructor stub
+	}
+
+	public double getSalary() {
+		return baseSalary;
+
+	}
+}

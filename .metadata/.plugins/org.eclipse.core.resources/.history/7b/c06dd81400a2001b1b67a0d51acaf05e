@@ -1,0 +1,5 @@
+package HW10;
+
+public abstract class BaseEmployee {
+
+}

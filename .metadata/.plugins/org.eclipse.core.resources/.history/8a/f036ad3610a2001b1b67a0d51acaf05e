@@ -1,0 +1,31 @@
+package HW11;
+
+public final class Manager extends Employee {
+
+	private final int PREMIUM_RATE = 3;
+
+	public Manager(String name, double baseSalary, int numberOfSubordinates) {
+		super(name, baseSalary);
+		this.numberOfSubordinates = numberOfSubordinates;
+		this.baseSalary = baseSalary;
+
+		System.out.println(getName() + "|" + getBaseSalary() + "|" + getSalary());
+	}
+
+	public int getNumberOfSubordinates() {
+		return numberOfSubordinates;
+	}
+
+	public void setNumberOfSubordinates(int numberOfSubordinates) {
+		this.numberOfSubordinates = numberOfSubordinates;
+	}
+
+	@Override
+	public double getSalary() {
+		if (numberOfSubordinates == 0) {
+			return baseSalary; } else {
+		return baseSalary * numberOfSubordinates / 100 * PREMIUM_RATE;
+	}
+	}
+	
+}

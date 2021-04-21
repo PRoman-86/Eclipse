@@ -1,0 +1,25 @@
+package HW11;
+
+public final class Director extends Employee {
+	
+	protected final String position = "Director";
+	private final int PREMIUM_RATE = 9;
+	
+	public Director(String name, double baseSalary, int numberOfSubordinates) {
+		super(name, baseSalary);
+		this.numberOfSubordinates = numberOfSubordinates;
+		System.out.println(getName() + "|" + getPosition() + "|" + getBaseSalary() + "|" + getSalary());
+	}
+	
+	@Override
+	public double getSalary() {
+		if (numberOfSubordinates == 0)
+			return baseSalary;
+		return baseSalary * (numberOfSubordinates / 100 * PREMIUM_RATE);
+	}
+	
+	public String getPosition() {
+		return this.position;
+	}
+
+}

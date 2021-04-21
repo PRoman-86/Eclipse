@@ -1,0 +1,31 @@
+import org.apache.commons.lang3.StringUtils;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		stringTest2();		
+	}
+		
+	
+	public static void stringTest() {
+		
+		System.out.println("Привет ...".equals(StringUtils.abbreviate("Привет всем, кто живет на Луне", 10))); //true
+		System.out.println("Привет всем, кто ...".equals(
+				StringUtils.abbreviate("Привет всем, кто живет на Луне", 20))); //true
+		System.out.println(StringUtils.abbreviate(null, 2)); //null
+		System.out.println("".equals(StringUtils.abbreviate("", 1))); //true
+		
+	}
+	
+public static void stringTest2() {
+		
+		"Привет ...".equals(StringUtils.abbreviate("Привет всем, кто живет на Луне", 10)); //true
+		"Привет всем, кто ...".equals(StringUtils.abbreviate("Привет всем, кто живет на Луне", 20)); //true
+		StringUtils.abbreviate(null, 2); //null
+		"".equals(StringUtils.abbreviate("", 1)); //true
+		
+	}
+}
+
+

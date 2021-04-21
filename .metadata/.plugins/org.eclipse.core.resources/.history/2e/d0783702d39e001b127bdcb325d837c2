@@ -1,0 +1,61 @@
+package HW11;
+
+public class StaffUtils {
+	
+	public static String searchByName(Employee[] employeeArr, String searchName) {
+		for (int i=0; i<employeeArr.length; i++) {
+			if (employeeArr[i].getName().equals(searchName))
+				return employeeArr[i].getName();
+		}
+		
+		return "Not Found";
+	}
+	
+	public static String searchBySubstringName(Employee[] employeeArr, String searchSubName) {
+		int index;
+		for (int i=0; i<employeeArr.length; i++) {
+			index = employeeArr[i].getName().indexOf(searchSubName);
+			if (index>0)
+				return employeeArr[i].getName();
+		}
+		
+		return "Not Found";
+	}
+	
+	public static double salariesSum(Employee[] employeeArr) {
+		double sum = 0;
+		for (int i=0; i<employeeArr.length; i++) {
+			sum = sum + employeeArr[i].getSalary();
+		}
+		
+		return sum;
+	}
+	
+	public static double lowestWage(Employee[] employeeArr) {
+		double minValue = Double.MAX_VALUE;
+		for (int i=0; i<employeeArr.length; i++) {
+			if (minValue > employeeArr[i].getSalary()) 
+				minValue = employeeArr[i].getSalary();
+		}
+		
+		return minValue;
+	}
+	
+	public static double highestWage(Employee[] employeeArr) {
+		double maxValue = Double.MIN_VALUE;
+		for (int i=0; i<employeeArr.length; i++) {
+			if (maxValue < employeeArr[i].getSalary()) 
+				maxValue = employeeArr[i].getSalary();
+		}
+		
+		return maxValue;
+	}
+	
+	public static int minManagers(Manager[] managerArr) {
+		int minValue = Integer.MAX_VALUE;
+		for (int i=0; i<managerArr.length; i++) {
+			
+		}
+	}
+
+}

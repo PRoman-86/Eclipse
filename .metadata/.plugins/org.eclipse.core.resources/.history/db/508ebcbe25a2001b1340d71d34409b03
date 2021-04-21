@@ -1,0 +1,23 @@
+import org.apache.commons.lang3.StringUtils;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		stringTest();
+//		stringTest(null, 2);
+//		stringTest("", 5);
+		
+	}
+		
+	
+	public static void stringTest() {
+		
+		System.out.println("Привет ...".equals(StringUtils.abbreviate("Привет всем, кто живет на Луне", 10)));
+		System.out.println("Привет всем, кто ...".equals(StringUtils.abbreviate("Привет всем, кто живет на Луне", 20)));
+		System.out.println("null".equals(StringUtils.abbreviate(null, 0)));
+		
+	}
+}
+
+
