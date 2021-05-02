@@ -10,7 +10,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
 
-//Print speed detection program
+/*Print speed detection program
+ver 1.0 - realase
+ver 1.1 - source optimization
+
+*/
+
 public class Interface {
 
 	public static void main(String[] args) {
@@ -18,7 +23,7 @@ public class Interface {
 		System.out.println(new Date() + " - start app");
 	}
 
-	JFrame frame = new JFrame("Speed Writer 1.0");
+	JFrame frame = new JFrame("Speed Writer 1.1");
 	JPanel mainPanel = new JPanel();
 	JTextArea mainArea = new JTextArea(20, 54);
 	JScrollPane scroll = new JScrollPane(mainArea);
@@ -27,7 +32,10 @@ public class Interface {
 	JLabel timeLabel = new JLabel("60");
 
 	Interface() {
+		// create an engine object (class "Engine")
+		Engine engine = new Engine(this);
 
+		// UI
 		frame.setSize(680, 410);
 		frame.setVisible(true);
 		frame.setResizable(false);
@@ -48,10 +56,8 @@ public class Interface {
 		mainArea.setForeground(Color.BLUE);
 
 		// the listener is registered to the button
-		// when the button is pressed, an object of the class "Engine" is created
-		// reference to the current object is passed (this)
-		startButton.addActionListener(new Engine(this));
-		aboutButton.addActionListener(new Engine(this));
+		startButton.addActionListener(engine);
+		aboutButton.addActionListener(engine);
 
 	}
 
