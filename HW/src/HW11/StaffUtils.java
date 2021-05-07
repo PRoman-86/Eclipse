@@ -2,7 +2,7 @@ package HW11;
 
 public class StaffUtils {
 
-	public static String searchByName(Employee[] employeeArr, String searchName) {
+	public static String searchByName(IEmployee[] employeeArr, String searchName) {
 		for (int i = 0; i < employeeArr.length; i++) {
 			if (employeeArr[i].getName().equals(searchName))
 				return employeeArr[i].getName();
@@ -11,7 +11,7 @@ public class StaffUtils {
 		return "Not Found";
 	}
 
-	public static String searchBySubstringName(Employee[] employeeArr, String searchSubName) {
+	public static String searchBySubstringName(IEmployee[] employeeArr, String searchSubName) {
 		int index;
 		for (int i = 0; i < employeeArr.length; i++) {
 			index = employeeArr[i].getName().indexOf(searchSubName);
@@ -22,7 +22,7 @@ public class StaffUtils {
 		return "Not Found";
 	}
 
-	public static double salariesSum(Employee[] employeeArr) {
+	public static double salariesSum(IEmployee[] employeeArr) {
 		double sum = 0;
 		for (int i = 0; i < employeeArr.length; i++) {
 			sum = sum + employeeArr[i].getSalary();
@@ -31,7 +31,7 @@ public class StaffUtils {
 		return sum;
 	}
 
-	public static double lowestWage(Employee[] employeeArr) {
+	public static double lowestWage(IEmployee[] employeeArr) {
 		double minValue = Double.MAX_VALUE;
 		for (int i = 0; i < employeeArr.length; i++) {
 			if (minValue > employeeArr[i].getSalary())
@@ -41,7 +41,7 @@ public class StaffUtils {
 		return minValue;
 	}
 
-	public static double highestWage(Employee[] employeeArr) {
+	public static double highestWage(IEmployee[] employeeArr) {
 		double maxValue = Double.MIN_VALUE;
 		for (int i = 0; i < employeeArr.length; i++) {
 			if (maxValue < employeeArr[i].getSalary())

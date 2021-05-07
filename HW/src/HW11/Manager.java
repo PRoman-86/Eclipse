@@ -1,6 +1,6 @@
 package HW11;
 
-public final class Manager extends Employee {
+public final class Manager extends Employee implements IManager {
 
 	private final int PREMIUM_RATE = 3;
 
@@ -12,10 +12,12 @@ public final class Manager extends Employee {
 		System.out.println(super.getName() + " (Manager)|" + super.getBaseSalary() + "|" + this.getSalary());
 	}
 
+	@Override
 	public int getNumberOfSubordinates() {
 		return numberOfSubordinates;
 	}
 
+	@Override
 	public void setNumberOfSubordinates(int numberOfSubordinates) {
 		this.numberOfSubordinates = numberOfSubordinates;
 	}
